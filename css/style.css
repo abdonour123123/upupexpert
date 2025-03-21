@@ -307,13 +307,16 @@ img {
     gap: 0;
   }
   .left-side {
-    width: auto !important;
+    max-width: 100% !important;
     padding-left: 4rem !important;
   }
   .right-side {
     width: auto !important;
     align-self: flex-start; /* Aligns it with the bottom of its container */
     padding-left: 3rem;
+  }
+  .content-identify span  {
+    font-size: 1.6rem;
   }
 }
 
@@ -354,7 +357,7 @@ img {
     font-size: 4rem;
   }
   .work-section .heading-secondary {
-    left: -20rem;
+    left: -8rem;
     top: -10rem;
   }
   img.feature-icon {
@@ -782,10 +785,11 @@ a:hover .hidden-text {
 }
 @media only screen and (max-width: 62.5em) {
   .medal-icon {
-    right: 37.5%;
+    margin-top: 1rem;
+    right: 30%;
     position: absolute;
     transform: translateY(-7.5rem);
-    max-width: 4rem;
+    max-width: 3rem;
   }
 }
 
