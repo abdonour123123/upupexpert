@@ -1158,7 +1158,7 @@ a:hover .hidden-text {
 }
 
 .testimonial-box {
-  max-width: 110rem;
+  width: 80rem;
   height: 28rem;
   display: flex;
   background-color: #fff;
@@ -1260,9 +1260,7 @@ a:hover .hidden-text {
 .testimonial-left-side .description {
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  line-height: 2;
+flex: 1;
 }
 @media only screen and (max-width: 75em) {
   .testimonial-left-side .description {
