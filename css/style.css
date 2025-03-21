@@ -2,6 +2,10 @@
 :root {
   --color-primary: #f8b21c;
   --color-secondary: #f8f8f8;
+  --bp-largest: 75em;
+  --bp-large: 62.5em;
+  --bp-medium: 50em;
+  --bp-small: 37.5em;
 }
 
 /* GENERAL */
@@ -19,22 +23,34 @@ html {
   scroll-behavior: smooth;
 }
 
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   font-family: "Bebas Nuese";
+  width: 100%;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .container {
-  width: 182rem;
+  max-width: 192rem;
+  width: 100%; /* Ensure it's not restricting the child */
   padding: 1.5rem 0;
   margin: 0 auto;
   display: flex;
   justify-content: center;
+ 
 }
+
 .btn {
   border: none;
   background-color: var(--color-primary);
@@ -80,6 +96,11 @@ img {
   align-items: center;
 }
 
+@media only screen and (max-width: 75em) {
+  .header .container {
+    gap: 17rem;
+  }
+}
 .uxpert-logo {
   max-width: 100%;
 }
@@ -123,6 +144,12 @@ img {
 .hero-section .container {
   background-color: var(--color-primary);
   height: 85rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .hero-section .container {
+    max-height: 33rem;
+  }
 }
 
 .menu {
@@ -199,6 +226,19 @@ img {
   background-repeat: no-repeat;
   max-width: 100rem;
 }
+.hero-video.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 115.625em) {
+  .hero-video {
+    display: none;
+  }
+  .hero-video.hidden {
+    display: flex;
+    max-width: 30rem;
+  }
+}
 
 .content {
   display: flex;
@@ -211,6 +251,17 @@ img {
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+@media only screen and (max-width: 115.625em) {
+  .play-button {
+  }
+  .play-button p {
+    font-size: 3rem !important;
+  }
+  .hero-section .content {
+    align-self: flex-end;
+  }
 }
 
 .play-button span {
@@ -250,6 +301,22 @@ img {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .content-identify {
+    flex-direction: column;
+    gap: 0;
+  }
+  .left-side {
+    width: auto !important;
+    padding-left: 4rem !important;
+  }
+  .right-side {
+    width: auto !important;
+    align-self: flex-start; /* Aligns it with the bottom of its container */
+    padding-left: 3rem;
+  }
+}
+
 .content-identify span {
   animation: fadeInUp 0.5s ease-out;
 }
@@ -282,10 +349,32 @@ img {
   animation: fadeInleft 0.5s ease-out;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .heading-secondary {
+    font-size: 4rem;
+  }
+  .work-section .heading-secondary {
+    left: -20rem;
+    top: -10rem;
+  }
+  img.feature-icon {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .work-section .heading-secondary {
+    left: -10rem;
+    top: -10rem;
+  }
+  .heading-secondary {
+    font-size: 3rem;
+  }
+}
+
 .left-side {
-  width: auto;
   display: grid;
-  width: 30%;
+  max-width: 30%;
   padding-left: 10rem;
   animation: fadeInUp 0.5s ease-out;
 }
@@ -364,6 +453,13 @@ span.btn-text {
   line-height: 2;
   text-align: center;
   animation: fadeInRight 0.5s ease-out;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .feature-cards {
+    padding: 0 !important;
+    width: auto !important;
+  }
 }
 
 @keyframes fadeInRight {
@@ -462,6 +558,32 @@ img.feature-icon {
   background-color: var(--color-secondary);
   display: flex;
   position: relative;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .gallery-section .container {
+    flex-direction: column;
+    object-fit: cover;
+    overflow: hidden;
+  }
+  .gallery-image--1 {
+    max-height: 15rem;
+    background-position: center;
+  }
+
+  .gallery-image--2 {
+    max-height: 15rem;
+    background-position: center;
+  }
+  .gallery-image--3 {
+    max-height: 15rem;
+    background-position: center;
+  }
+  .gallery-image--4 {
+    max-height: 15rem;
+    background-position: center;
+  }
 }
 
 .gallery-image--1 {
@@ -485,7 +607,7 @@ img.feature-icon {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0); /* Default transparent */
   transition: background 1.2s ease-in-out;
@@ -578,7 +700,7 @@ a.gallery-image--3:hover::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0); /* Default transparent */
   transition: background 0.3s ease-in-out;
@@ -658,6 +780,14 @@ a:hover .hidden-text {
   right: 60%;
   margin-right: 5rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .medal-icon {
+    right: 37.5%;
+    position: absolute;
+    transform: translateY(-7.5rem);
+    max-width: 4rem;
+  }
+}
 
 .award-nums {
   display: flex;
@@ -668,7 +798,7 @@ a:hover .hidden-text {
 .award-section .container {
   background-color: var(--color-secondary);
   height: 50rem;
-  width: 182rem;
+  max-width: 192rem;
   padding: 1.5rem 0;
   display: flex;
   flex-direction: column;
@@ -681,11 +811,44 @@ a:hover .hidden-text {
   font-size: 3rem;
   margin-bottom: 4rem;
   gap: 7rem;
-  width: 100rem;
+  max-width: 100rem;
   padding-top: 15rem;
-
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .upcontainer {
+    gap: 0rem;
+    flex-direction: column;
+    padding-top: 10rem;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .description-1 span {
+    font-size: 3rem !important;
+  }
+  .text-bold {
+    font-size: 2.5rem !important ;
+  }
+
+  .text-normal {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .description-1 span {
+    font-size: 2.5rem !important;
+  }
+  .text-bold {
+    font-size: 2rem !important ;
+  }
+
+  .text-normal {
+    font-size: 2rem !important;
+  }
 }
 
 .description-1 span {
@@ -700,7 +863,7 @@ a:hover .hidden-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 17rem;
+  max-width: 17rem;
   height: 8rem;
   padding-bottom: 1.5rem;
 }
@@ -729,21 +892,30 @@ a:hover .hidden-text {
 
 .clients-image {
   background-image: url(/data/clients.jpg);
-  width: 182rem;
-  height: 40rem;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   display: flex;
   background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .image-text {
   font-size: 9rem;
   line-height: 1;
-  width: 100rem;
+  width: 192rem;
+  height: auto;
   font-family: "Bebas Nuese", cursive;
+  margin-left: 20rem;
   color: #fff;
   animation: fadeInUp 1s;
+}
+@media only screen and (max-width: 37.5em) {
+  .image-text {
+    font-size: 6rem;
+    margin-left: 0;
+  }
 }
 
 .image-text span {
@@ -762,6 +934,12 @@ a:hover .hidden-text {
   margin-right: 5rem;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .logo-section .heading-secondary {
+    margin-bottom: 0rem;
+  }
+}
+
 .logo-section .heading-secondary span {
   display: block;
   font-family: "Courgette", Arial, cursive;
@@ -777,8 +955,28 @@ a:hover .hidden-text {
   position: relative;
 }
 .logo-section .container {
-  padding: 0rem 10rem 0rem 10rem;
   background-color: var(--color-secondary);
+  padding: 0 10rem 0 10rem;
+}
+.logo-section {
+  max-width: 100%; /* Ensures no extra space */
+}
+@media only screen and (max-width: 62.5em) {
+  .logo-section .container:nth-child(1) {
+    padding-left: 1rem; /* Moves it to the right */
+    justify-self: flex-start;
+  }
+
+  .logo-section .container:nth-child(2) {
+    padding-bottom: 2rem !important;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .upcontainer {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 .logo-section .slick-line::after {
   content: "";
@@ -793,7 +991,11 @@ a:hover .hidden-text {
   transition: transform 0.3s ease-in-out;
 }
 
-.logo-section .slick-line:hover::after {
+.slick-slide {
+  display: flex;
+}
+
+.logo-section .slick-line:hover::after 
   transform: scaleX(1);
 }
 
@@ -807,8 +1009,14 @@ a:hover .hidden-text {
 }
 
 .logo-section .logo {
-  width: 19rem;
+  max-width: 19rem;
   height: 12rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .logo-section .logo {
+    max-width: 100%;
+  }
 }
 
 .logo-section .container:nth-child(2) {
@@ -821,6 +1029,15 @@ a:hover .hidden-text {
   display: grid;
   position: relative;
   grid-template-columns: repeat(5, 1fr);
+}
+@media only screen and (max-width: 62.5em) {
+  .logo-part-1 {
+    column-gap: 2rem;
+  }
+  .logo-section .logo {
+    max-width: 7rem;
+    height: 6rem;
+  }
 }
 .logo-part-2 {
   display: none;
@@ -851,6 +1068,16 @@ a:hover .hidden-text {
 
 .circle-2::after {
   left: 45rem; /* Adjust positioning */
+}
+
+@media only screen and (max-width: 62.5em) {
+  .circle-1::before {
+    left: 36rem; /* Adjust positioning */
+  }
+
+  .circle-2::after {
+    left: 40rem; /* Adjust positioning */
+  }
 }
 
 /* 🔥 Change color on hover */
@@ -889,6 +1116,7 @@ a:hover .hidden-text {
   margin: 0;
   position: absolute;
   top: -15%;
+  left: 15%;
 }
 
 .testimonials-section .heading-secondary span {
@@ -903,11 +1131,19 @@ a:hover .hidden-text {
   top: 25%;
   left: 50%;
 }
+
+@media only screen and (max-width: 62.5em) {
+  .swear {
+    top: 45% !important;
+    left: 0 !important;
+    margin-left: 7rem;
+  }
+}
+
 .testimonials-section .container:first-child {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: #f4a900; /* Orange background */
   padding: 12rem 5rem 5rem 5rem;
   text-align: center;
@@ -915,8 +1151,14 @@ a:hover .hidden-text {
   margin-bottom: -15rem;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .testimonials-section .container:first-child {
+    margin-bottom: -3.5rem;
+  }
+}
+
 .testimonial-box {
-  width: 110rem;
+  max-width: 110rem;
   height: 28rem;
   display: flex;
   background-color: #fff;
@@ -925,6 +1167,15 @@ a:hover .hidden-text {
   align-items: center;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   position: relative;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .testimonial-box {
+    max-width: 100%;
+    padding: 0rem;
+    flex-direction: column;
+    position: relative;
+  }
 }
 
 .testimonial-box .arrow {
@@ -957,17 +1208,31 @@ a:hover .hidden-text {
 }
 
 .testimonial-image {
-  width: 8.4rem;
+  max-width: 8.4rem;
   height: 8.4rem;
   border-radius: 50%;
   position: absolute;
   top: -4.5rem;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .testimonial-image {
+    max-width: 6rem;
+    height: auto;
+    text-align: center;
+  }
+}
+
 .Pango-logo {
-  width: 8.3rem;
+  max-width: 8.3rem;
   height: 2.2rem;
   margin-top: 2rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .Pango-logo {
+    height: auto;
+  }
 }
 
 .testimonial-box .heading-tertiary::after {
@@ -981,12 +1246,56 @@ a:hover .hidden-text {
   left: 5.5%;
 }
 
+@media only screen and (max-width: 75em) {
+  .testimonial-box .heading-tertiary::after {
+    position: unset;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .testimonial-box .heading-tertiary::after {
+    position: unset;
+  }
+}
+
 .testimonial-left-side .description {
   font-size: 1.5rem;
   font-family: "Montserrat", sans-serif;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   line-height: 2;
+}
+@media only screen and (max-width: 75em) {
+  .testimonial-left-side .description {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+    width: 75%;
+  
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .testimonial-left-side .description {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1;
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .testimonial-left-side .description {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1;
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .testimonial-left-side .description {
+    width: 80%;
+  }
 }
 
 .testimonial-right-side .heading-tertiary {
@@ -997,8 +1306,16 @@ a:hover .hidden-text {
   font-weight: 400;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .testimonial-box .heading-tertiary {
+    font-size: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 0;
+  }
+}
+
 .testimonial-left-side {
-  width: 57rem;
+  width: 30rem;
   height: 30rem;
   display: flex;
   justify-content: center;
@@ -1022,6 +1339,23 @@ a:hover .hidden-text {
   animation: fadeInDown 1.5s ease-out;
 }
 
+@media only screen and (max-width: 62.5em) {
+  .contact-section .container {
+    flex-direction: column;
+    padding: 0 !important;
+    align-items: unset;
+    margin-left: 25rem;
+    max-width: 20rem; /* Set your desired width */
+    width: 100%; /* Ensure it respects max-width */
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .contact-section .container {
+    margin-left: 10rem;
+  }
+}
+
 .contact-section .contact-text-1 {
   font-family: "bebas Neue", cursive;
   font-size: 4rem;
@@ -1043,6 +1377,20 @@ a:hover .hidden-text {
 .contact-text-2 span {
   display: block;
   font-weight: 800;
+}
+@media only screen and (max-width: 62.5em) {
+  .contact-text-2 {
+    font-size: 1.4rem !important;
+  }
+  .contact-text-1 span {
+    font-size: 1.5rem !important;
+  }
+  .contact-text-1 {
+    font-size: 1.6rem !important;
+  }
+  .address-text {
+    font-size: 1.2rem !important;
+  }
 }
 
 .address-text {
@@ -1069,10 +1417,16 @@ a:hover .hidden-text {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10rem;
+  max-width: 10rem;
   height: 5rem;
   cursor: pointer;
   margin-left: 7rem;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .arrow-a {
+    display: none;
+  }
 }
 
 /* The <i> element (acts as a reference) */
@@ -1164,11 +1518,16 @@ a:hover .hidden-text {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  max-width: 100%;
   background: white; /* Change if needed */
 
   padding: 10px;
   z-index: 1000; /* Ensures it stays on top */
+}
+@media only screen and (max-width: 62.5em) {
+  .copyright-section .container {
+    display: none;
+  }
 }
 
 .copyright-section p.first-text {
@@ -1202,7 +1561,6 @@ a:hover .hidden-text {
 }
 
 .social-logo {
-  width: 2rem;
   height: 2rem;
   display: flex;
   margin-left: 0.5rem;
