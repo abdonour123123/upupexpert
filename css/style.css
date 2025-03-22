@@ -1356,8 +1356,6 @@ flex: 1;
   .contact-section .container {
 
     padding: 0 !important;
-    align-items: unset;
-
     width: 100%; /* Ensure it respects max-width */
   }
 }
@@ -1389,17 +1387,49 @@ flex: 1;
 @media only screen and (max-width: 62.5em) {
   .contact-text-2 {
     font-size: 1.4rem !important;
+    text-align: center;
+    align-items: center;
   }
   .contact-text-1 span {
     font-size: 1.5rem !important;
+    text-align: center;
+    align-items: center;
   }
   .contact-text-1 {
     font-size: 1.6rem !important;
+    text-align: center;
+    align-items: center;
   }
   .address-text {
     font-size: 1.2rem !important;
+    text-align: center;
+    align-items: center;
   }
 }
+
+@media only screen and (max-width: 37.5em) {
+  .contact-text-2 {
+    font-size: 1rem !important;
+    text-align: center;
+    align-items: center;
+  }
+  .contact-text-1 span {
+    font-size: 1.2rem !important;
+    text-align: center;
+    align-items: center;
+  }
+  .contact-text-1 {
+    font-size: 1.4rem !important;
+    text-align: center;
+    align-items: center;
+  }
+  .address-text {
+    font-size: 0.8rem !important;
+    text-align: center;
+    align-items: center;
+  }
+}
+
 
 .address-text {
   font-family: "Montserrat", sans-serif;
