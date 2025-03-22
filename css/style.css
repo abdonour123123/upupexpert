@@ -1175,7 +1175,7 @@ a:hover .hidden-text {
 
 @media only screen and (max-width: 62.5em) {
   .testimonial-box {
-    max-width: 100%;
+    max-width: 70%;
     padding: 0rem;
     flex-direction: column;
     position: relative;
