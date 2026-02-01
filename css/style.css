@@ -146,6 +146,10 @@ img {
 
 .hero-section .container {
   background-color: var(--color-primary);
+<<<<<<< HEAD
+=======
+  height: 85rem;
+>>>>>>> 8a6d2dbcfb822f23bd85d818f6f56b8fdef22c50
 }
 
 @media only screen and (max-width: 75em) {
@@ -616,7 +620,11 @@ img.feature-icon {
   position: absolute;
   top: 0;
   left: 0;
+<<<<<<< HEAD
  width: 100%;
+=======
+  max-width: 100%;
+>>>>>>> 8a6d2dbcfb822f23bd85d818f6f56b8fdef22c50
   height: 100%;
   background: rgba(0, 0, 0, 0); /* Default transparent */
   transition: background 1.2s ease-in-out;
@@ -709,7 +717,11 @@ a.gallery-image--3:hover::before {
   position: absolute;
   top: 0;
   left: 0;
+<<<<<<< HEAD
 width: 100%;
+=======
+  max-width: 100%;
+>>>>>>> 8a6d2dbcfb822f23bd85d818f6f56b8fdef22c50
   height: 100%;
   background: rgba(0, 0, 0, 0); /* Default transparent */
   transition: background 0.3s ease-in-out;
@@ -1235,7 +1247,11 @@ a:hover .hidden-text {
 
 .Pango-logo {
   max-width: 8.3rem;
+<<<<<<< HEAD
 
+=======
+  height: 2.2rem;
+>>>>>>> 8a6d2dbcfb822f23bd85d818f6f56b8fdef22c50
   margin-top: 2rem;
 }
 
