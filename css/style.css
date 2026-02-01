@@ -1777,7 +1777,7 @@ img {
 
 .hero-section .container {
   background-color: var(--color-primary);
-  height: 85rem;
+
 }
 
 @media only screen and (max-width: 75em) {
@@ -2867,7 +2867,6 @@ a:hover .hidden-text {
 
 .Pango-logo {
   max-width: 8.3rem;
-  
   margin-top: 2rem;
 }
 
