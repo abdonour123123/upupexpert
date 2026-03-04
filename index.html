@@ -19,6 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
   <!-- IONICONS INSTALLION -->
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -48,7 +49,7 @@
           </a>
         </li>
       </div>
-      <a href="" class="menu-bar">
+      <div href="" class="menu-bar" id="menuBar">
         <div class="menu">
           <span class="M">M</span>
           <span class="E">E</span>
@@ -60,39 +61,63 @@
           </div>
         </div>
       </a>
+<div class="dropdown-box" id="dropdownBox">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#work">Work</a>
+  <a href="#contact">Contact</a>
+</div>
     </div>
   </header>
-  <div class="hero-section">
-    <div class="container">
-      <div class="content">
-        <div class="hero-video">
-          <img src="/data/desktop-end.gif" alt="Your User Experience" />
-        </div>
-        <div class="hero-video hidden">
-          <img src="/data/mobile-end.gif" alt="Youe User Experience">
-        </div>
-        <div class="play-button">
-          <button class="btn">
+<div class="hero-section">
+   <div class="container">
+
+         <h1 class="headline">
+            I build clean, responsive websites that look great on all devices
+         </h1>
+         <p class="subheadline">
+            This sample website demonstrates my skills in HTML, CSS, and JavaScript. Perfect for clients seeking fast, reliable front-end work.
+         </p>
+      
+
+      <div class="hero-video">
+         <img src="/data/desktop-end.gif" alt="Your User Experience" />
+      </div>
+      <div class="hero-video hidden">
+         <img src="/data/mobile-end.gif" alt="Your User Experience">
+      </div>
+      <div class="play-button">
+         <button class="btn">
             <span>
-              <ion-icon name="play" class="arrow">
-              </ion-icon>
+               <ion-icon name="play" class="arrow">
+               </ion-icon>
             </span>
             <span>
-              <ion-icon name="play" class="arrow">
-              </ion-icon>
-              </ion-icon>
+               <ion-icon name="play" class="arrow">
+               </ion-icon>
+               </ion-icon>
             </span>
             <span>
-              <ion-icon name="play" class="arrow">
-              </ion-icon>
-              </ion-icon>
+               <ion-icon name="play" class="arrow">
+               </ion-icon>
+               </ion-icon>
             </span>
             <p>Play Show reel</p>
-          </button>
-        </div>
+         </button>
       </div>
-    </div>
-  </div>
+      <div id="gifModal" class="modal">
+<div class="modal-content">
+  <span class="close">&times;</span>
+  <video controls >
+    <source src="/data/Uxpert-Showreel-WEB.m4v" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</div>
+   </div>
+</div>
+</div>
+</div>
   <div class="identify-section">
     <div class="container">
       <div class="content-identify">
@@ -181,7 +206,7 @@
   <!-- START GALLERY SECTION -->
   <div class="gallery-section">
     <div class="container">
-      <a href="#" class=" gallery-image gallery-image--1">
+      <a class=" gallery-image gallery-image--1">
         <img src="data/logo-header.png" alt="Dominos" class="logo-header">
         <div class="description">
           <p class="head-title">Pizza App & Site</p>
@@ -189,7 +214,7 @@
           <div class="hidden-text">Food, Fast, Fun</div>
         </div>
       </a>
-      <a href="#" class=" gallery-image gallery-image--2">
+      <a class=" gallery-image gallery-image--2">
         <img src="data/pango.png" alt="" class="logo-header">
         <div class="description">
           <p class="head-title">Mobility payments</p>
@@ -197,16 +222,16 @@
           <div class="hidden-text">The Easy Way</div>
         </div>
       </a>
-      <a href="#" class=" gallery-image gallery-image--3">
-        <img src="data/logo.png" alt="" class="logo-header">
+      <a class=" gallery-image gallery-image--3">
+
         <div class="description">
           <p class="head-title">Train scheduling</p>
           <SPAn>Multi platform</SPAn>
           <div class="hidden-text">Plan Your Ride</div>
         </div>
       </a>
-      <a href="#" class=" gallery-image gallery-image--4">
-        <img src="data/top-logo.png" alt="" class="logo-header">
+      <a class=" gallery-image gallery-image--4">
+        
         <div class="description">
           <p class="head-title">Pension clearinghouse</p>
           <span>Website</span>
@@ -222,7 +247,9 @@
         <div class="upcontainer">
           <div class="border-top">
           </div>
-          <h2 class="heading-secondary">38 Awards</h2>
+<h2 class="heading-secondary">
+  <span class="award-total" data-count="38">0</span> Awards
+</h2>
           <ion-icon name="medal-outline" class="medal-icon">
           </ion-icon>
           <span>We’re proud to take part in our clients’ success</span>
@@ -230,42 +257,42 @@
       </div>
       <div class="award-nums">
         <div class="description-1">
-          <span data-count="18">18</span>
+<span data-count="18">0</span>
           <div class="paragraph">
             <p class="text-bold">Mobi/Webi</p>
             <p class="text-normal">Awards</p>
           </div>
         </div>
         <div class="description-1">
-          <span>7</span>
+<span data-count="7">0</span>
           <div class="paragraph">
             <p class="text-bold">IT</p>
             <p class="text-normal">Awards</p>
           </div>
         </div>
         <div class="description-1">
-          <span>5</span>
+<span data-count="7">0</span>
           <div class="paragraph">
             <p class="text-bold">Brand</p>
             <p class="text-normal">Awards</p>
           </div>
         </div>
         <div class="description-1">
-          <span>3</span>
+<span data-count="3">0</span>
           <div class="paragraph">
             <p class="text-bold">Best App</p>
             <p class="text-normal">Design</p>
           </div>
         </div>
         <div class="description-1">
-          <span>2</span>
+<span data-count="3">0</span>
           <div class="paragraph">
             <p class="text-bold">Best Mobile</p>
             <p class="text-normal">Awards</p>
           </div>
         </div>
         <div class="description-1">
-          <span>3</span>
+<span data-count="3">0</span>
           <div class="paragraph">
             <p class="text-bold">Other</p>
             <p class="text-normal">Awards</p>
@@ -294,14 +321,17 @@
             <span>our friends</span>
           </h2>
           <div class="slick-slide">
-            <a href="#org-tab" class="slick-line" id="org-logos">Organizations</a>
-            <a href="#tech-logos" class="slick-line" id="tech-logos">Technology</a>
+            <a class="slick-line" id="org-logos">Organizations</a>
+            <a class="slick-line" id="tech-logos">Technology</a>
           </div>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="logo-part-1" id="#org-tab">
+        <div class="logo-slider">
+    <div class="logo-track">
+
+      <div class="logo-part active" id="logo-part-1">
         <img src="data/LOGOS/netapp.svg" alt="" class="logo">
         <img src="data/LOGOS/nayax-2.svg" alt="" class="logo">
         <img src="data/LOGOS/ripples.svg" alt="" class="logo">
@@ -317,13 +347,30 @@
         <img src="data/LOGOS/game-effective.svg" alt="" class="logo">
         <img src="data/LOGOS/bird.svg" alt="" class="logo">
         <img src="data/LOGOS/personetics.svg" alt="" class="logo">
-        <a class="check-button">
-          <span class="circle-1">
-          </span>
-          <span class="circle-2">
-          </span>
-        </a>
+
       </div>
+<div class="logo-part" id="logo-part-2">
+        <img src="data/LOGOS/personetics.svg" alt="" class="logo">
+        <img src="data/LOGOS/continuity.svg" alt="" class="logo">
+        <img src="data/LOGOS/nayax-2.svg" alt="" class="logo">
+        <img src="data/LOGOS/bright-machines.svg" alt="" class="logo">
+        <img src="data/LOGOS/orbotech.svg" alt="" class="logo">
+        <img src="data/LOGOS/gigaspace-1.svg" alt="" class="logo">
+        <img src="data/LOGOS/imperva.svg" alt="" class="logo">
+        <img src="data/LOGOS/switchbee.svg" alt="" class="logo">
+        <img src="data/LOGOS/game-effective.svg" alt="" class="logo">
+        <img src="data/LOGOS/ripples.svg" alt="" class="logo">
+        <img src="data/LOGOS/netapp.svg" alt="" class="logo">
+        <img src="data/LOGOS/sensos-1.svg" alt="" class="logo">
+        <img src="data/LOGOS/bird.svg" alt="" class="logo">
+        <img src="data/LOGOS/rit-2.svg" alt="" class="logo">
+        <img src="data/LOGOS/one-city-1.svg" alt="" class="logo">
+      </div>
+        </div>
+
+</div>
+
+    </div>
     </div>
     <div class="testimonials-section">
       <div class="container">
@@ -337,19 +384,48 @@
         </div>
       </div>
       <div class="container">
-        <div class="testimonial-box">
-          <span class="arrow left-arrow">←</span>
-          <div class="testimonial-right-side">
-            <img src="data/Liat-Photo-150x150.jpeg" alt="" class="testimonial-image">
-            <h3 class="heading-tertiary">Liat Peled</h3>
-            <span class="role">VP Product</span>
-            <img src="data/pango.png" alt="" class="Pango-logo">
-          </div>
-          <div class="testimonial-left-side">
-            <div class="description">Thank you for rising to the challenge and helping us transform our strategy and vision into a beautiful and unique app! Thank you for constantly pushing our limits to provide our customers with the best user experience! All with uncompromising professionalism and a positive can-do approach, and most importantly, with great vibes and energy along the way. Thank you for being a true partner!</div>
-          </div>
-          <span class="arrow right-arrow">→</span>
-        </div>
+
+  <div class="testimonial-wrapper">
+    <!-- Testimonial 1 -->
+    <div class="testimonial-box active">
+      <span id="prev" class="arrow left-arrow">←</span>
+
+      <div class="testimonial-right-side">
+        <img src="data/Liat-Photo-150x150.jpeg" class="testimonial-image">
+        <h3 class="heading-tertiary">Liat Peled</h3>
+        <span class="role">VP Product</span>
+        <img src="data/pango.png" class="Pango-logo">
+      </div>
+
+      <div class="testimonial-left-side">
+        <div class="description">
+Thank you for rising to the challenge and helping us completely transform our strategy. What truly stood out was not just the quality of the work, but the clarity and direction you brought to every discussion. You helped us see opportunities we were missing and turned complex problems into actionable solutions. The impact on our team’s confidence and execution has been remarkable. We couldn’t have asked for a better partner in this process.        </div>
+      </div>
+
+      <span id="next" class="arrow right-arrow">→</span>
+    </div>
+
+
+ <div class="testimonial-box">
+      <span class="arrow left-arrow">←</span>
+
+      <div class="testimonial-right-side">
+        <img src="data/Liat-Photo-150x150.jpeg" class="testimonial-image">
+        <h3 class="heading-tertiary">Harry Mack</h3>
+        <span class="role">CEO</span>
+    <img src="data/pango.png" class="Pango-logo">
+      </div>
+
+      <div class="testimonial-left-side">
+        <div class="description">
+Working with you was a turning point for our company. From day one, you demonstrated deep understanding, creativity, and commitment to delivering real results — not just ideas. You challenged our assumptions, refined our vision, and helped us move forward with focus and momentum. The transformation in our strategy and performance speaks for itself. We’re incredibly grateful for your leadership and support.        </div>
+      </div>
+
+      <span class="arrow right-arrow">→</span>
+    </div> 
+
+</div>
+        
       </div>
     </div>
     <div class="contact-section">
@@ -367,8 +443,8 @@
         <div class="contact-text-2">+972-1599-59 69 69
           <span>office@uxpert.com</span>
         </div>
-        <div class="address-text">30 Shacham st.
-          <span>Petah Tiqwa, Israel</span>
+        <div class="address-text">30  st.
+          <span>Giza, Egypt</span>
         </div>
       </div>
     </div>
@@ -390,6 +466,7 @@
         </img>
       </img>
     </img>
+    <script src="java.js"></script>
 </body>
 
 </html>
